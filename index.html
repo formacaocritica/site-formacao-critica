@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação Crítica na Era Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Formação Crítica na Era Digital</h1>
+            <p>Um espaço de formação continuada para professores que querem enfrentar os desafios da cultura digital, do Brain Rot e da desinformação com consciência e criticidade.</p>
+        </div>
+    </section>
+
+    <!-- Cards de Navegação -->
+    <section class="cards-section">
+        <div class="cards-container">
+            <a href="brainrot.html" class="card">
+                <h3>O que é Brain Rot?</h3>
+                <p>Entenda o fenômeno que está afetando a atenção e o desenvolvimento das crianças.</p>
+            </a>
+            <a href="estrategias.html" class="card">
+                <h3>Estratégias de Sala</h3>
+                <p>Atividades práticas e propostas pedagógicas prontas para usar.</p>
+            </a>
+            <a href="troca.html" class="card">
+                <h3>Espaço de Troca</h3>
+                <p>Compartilhe experiências com outros educadores.</p>
+            </a>
+            <a href="curadoria.html" class="card">
+                <h3>Curadoria de Vídeos</h3>
+                <p>Seleção crítica de conteúdos sobre tecnologia, capitalismo e educação.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+</html>
