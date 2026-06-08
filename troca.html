@@ -13,17 +13,16 @@
 
     <section class="content-page">
         <h1>Espaço de Troca</h1>
-        <p style="font-size: 1.2rem; max-width: 900px;">
-            Este é um espaço para professores compartilharem experiências, atividades, desafios e reflexões sobre Brain Rot, desinformação, uso de telas e formação crítica na sala de aula.
+        <p style="font-size: 1.2rem; max-width: 900px; margin-bottom: 40px;">
+            Este é um espaço aberto para professores compartilharem experiências, atividades bem-sucedidas, desafios e reflexões sobre Brain Rot, desinformação, uso consciente de telas e formação crítica na Educação Básica.
         </p>
 
-        <div style="background: #f1f3f5; padding: 30px; border-radius: 12px; margin: 40px 0;">
-            <h2>Como participar?</h2>
-            <p>Escreva sua experiência, atividade ou dúvida abaixo. Todas as contribuições serão visíveis para outros educadores.</p>
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 40px;">
+            <h3>Como participar?</h3>
+            <p>Escreva abaixo sua experiência ou dúvida. Os comentários são públicos e visíveis para toda a comunidade de educadores.</p>
         </div>
 
-        <!-- Seção de Comentários (Utterances) -->
-        <h2>Compartilhe sua experiência</h2>
+        <!-- Utterances - Comentários -->
         <div id="utterances-container"></div>
     </section>
 
@@ -38,9 +37,9 @@
         // Carrega Utterances
         const script = document.createElement('script');
         script.src = 'https://utteranc.es/client.js';
-        script.setAttribute('repo', 'formacaocritica/site-formacao-critica');  // ← Mude se o nome do repo for diferente
+        script.setAttribute('repo', 'formacaocritica/site-formacao-critica');
         script.setAttribute('issue-term', 'pathname');
-        script.setAttribute('label', 'comentario');
+        script.setAttribute('label', 'troca');
         script.setAttribute('theme', 'github-light');
         script.async = true;
         document.getElementById('utterances-container').appendChild(script);
