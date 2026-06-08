@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégias de Sala de Aula - Formação Crítica na Era Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .estrategia-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+        }
+        .estrategia-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <div id="header"></div>
+
+    <section class="content-page">
+        <h1>Estratégias de Sala de Aula</h1>
+        <p style="font-size: 1.15rem; max-width: 900px;">
+            Propostas pedagógicas práticas para professores da Educação Básica enfrentarem os desafios do Brain Rot, da desinformação e do consumo excessivo de telas. Todas as estratégias são inspiradas em educação midiática, pedagogia histórico-crítica e evidências recentes.
+        </p>
+
+        <div class="estrategia-card">
+            <h3>1. Detox Digital e Rotina de Atenção Plena</h3>
+            <p>Comece a aula com 5-10 minutos de "desconexão": leitura em voz alta, meditação guiada ou conversa em círculo sem celulares. Use o método Pomodoro adaptado (25 min foco + 5 min movimento). Incentive os alunos a registrarem o que sentiram após o período sem tela.</p>
+        </div>
+
+        <div class="estrategia-card">
+            <h3>2. Análise Crítica de Vídeos Curtos (Brain Rot em Ação)</h3>
+            <p>Mostre um Reel/TikTok viral e pergunte: Quem produziu? Qual é o objetivo? Que emoções ele desperta? O que ele omite? Compare com um texto longo sobre o mesmo tema. Desenvolve pensamento crítico e conscientização sobre algoritmos.</p>
+        </div>
+
+        <div class="estrategia-card">
+            <h3>3. Projetos de Educação Midiática e Fact-Checking</h3>
+            <p>Crie “Agências de Checagem” em sala. Os alunos recebem notícias duvidosas e devem verificar fontes, cruzá-las e produzir um “boletim da verdade”. Integre com BNCC (competências de comunicação e cidadania).</p>
+        </div>
+
+        <div class="estrategia-card">
+            <h3>4. Atividades Offline e Multissensoriais</h3>
+            <p>Alternar momentos digitais com atividades práticas: debate presencial, teatro, experimentos, desenho, escrita manual, brincadeiras ao ar livre. Estimula concentração profunda e criatividade.</p>
+        </div>
+
+        <div class="estrategia-card">
+            <h3>5. Diário Reflexivo e Autorregulação</h3>
+            <p>Os alunos mantêm um diário semanal sobre tempo de tela, o que sentiram e como isso afetou sua atenção e humor. Discuta em roda: “O que o Brain Rot rouba de nós?”</p>
+        </div>
+
+        <div class="estrategia-card">
+            <h3>6. Produção Colaborativa de Conteúdo Longo</h3>
+            <p>Em vez de só consumir, os alunos criam podcasts, vídeos longos, murais ou artigos sobre temas da comunidade. Valoriza o esforço cognitivo profundo.</p>
+        </div>
+
+        <h2 style="margin-top: 50px;">Dicas para Implementação</h2>
+        <ul>
+            <li>Comece pequeno: uma estratégia por semana.</li>
+            <li>Envolva as famílias: envie orientações sobre limites de tela em casa.</li>
+            <li>Documente os resultados: observe a evolução da atenção e participação dos alunos.</li>
+            <li>Articule com a Pedagogia Histórico-Crítica: questione as lógicas capitalistas por trás das plataformas.</li>
+        </ul>
+
+        <p style="margin-top: 40px; font-style: italic;">
+            “A escola deve ser o espaço onde se reconquista a capacidade de atenção profunda e pensamento crítico.” 
+            — Inspirado nas contribuições de Saviani, Freire e pesquisas recentes sobre Brain Rot.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

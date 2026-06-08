@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Projeto - Formação Crítica na Era Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .about-grid img {
+            width: 100%;
+            max-height: 420px;        /* Aumentado */
+            height: auto;
+            object-fit: contain;      /* Não corta mais a cabeça */
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            background: #f8f9fa;
+        }
+        .about-text {
+            text-align: justify;
+            font-size: 1.12rem;
+            line-height: 1.8;
+            max-width: 950px;
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <div id="header"></div>
+
+    <section class="content-page">
+        <h1>Sobre o Projeto</h1>
+        
+        <p class="about-text">
+            Este Produto Educacional faz parte da dissertação de mestrado de <strong>Cissa Gisele Alves Pinheiro</strong>, 
+            intitulada <strong>“O Papel do Professor Frente à Desinformação na Era Digital: possibilidades e desafios para a formação crítica dos estudantes no século XXI”</strong>, 
+            desenvolvida no Programa de Pós-Graduação em Educação Básica da Universidade Federal de Uberlândia (UFU), sob orientação da Profa. Dra. Klívia de Cássia Silva Nunes.
+        </p>
+
+        <p class="about-text">
+            O objetivo central é contribuir com a formação continuada de professores da Educação Básica, oferecendo reflexões teóricas e práticas sobre Brain Rot, cultura digital, desinformação e a importância da pedagogia crítico-emancipatória no contexto contemporâneo.
+        </p>
+
+        <div class="about-grid">
+            <div>
+                <img src="assets/images/cissa.jpeg" alt="Cissa Gisele Alves Pinheiro">
+                <h2>Cissa Gisele Alves Pinheiro</h2>
+                <p><strong>Autora do Produto Educacional</strong></p>
+                <p>Professora da Rede Municipal de Uberlândia, com experiência consolidada em Educação Infantil, Anos Iniciais do Ensino Fundamental e Gestão Escolar. Cursa o Mestrado Profissional em Educação Básica na UFU, com pesquisa voltada à formação crítica de professores na era digital.</p>
+            </div>
+
+            <div>
+                <img src="assets/images/klivia.jpeg" alt="Profa. Dra. Klívia de Cássia Silva Nunes">
+                <h2>Profa. Dra. Klívia de Cássia Silva Nunes</h2>
+                <p><strong>Orientadora</strong></p>
+                <p>Professora Associada da Universidade Federal de Uberlândia (ICHPO). Doutora em Educação pela UFSCar, com vasta experiência em políticas educacionais, educação do campo e formação docente. Líder de grupos de pesquisa em Política, Formação e Práticas Educativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
