@@ -11,3 +11,15 @@
         </ul>
     </div>
 </nav>
+
+<button class="accessibility-btn" onclick="toggleAccessibilityMenu()">♿</button>
+
+<div class="accessibility-menu" id="accessibility-menu">
+    <ul>
+        <li><button onclick="toggleAccessibility('high-contrast', this)">Alto Contraste (Ativar/Desativar)</button></li>
+        <li><button onclick="toggleAccessibility('large-text', this)">Fonte Legível (Ativar/Desativar)</button></li>
+        <li><button onclick="increaseFontSize()">Aumentar Letra</button></li>
+        <li><button onclick="decreaseFontSize()">Diminuir Letra</button></li>
+        <li><button onclick="toggleTextToSpeech()">🔊 Ler Página em Voz Alta</button></li>
+    </ul>
+</div>
