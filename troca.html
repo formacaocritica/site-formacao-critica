@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaço de Troca - Formação Crítica na Era Digital</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .form-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0 60px 0;
+            border: 1px solid #e0e0e0;
+        }
+        .experiencia-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-left: 6px solid #3498db;
+        }
+        .experiencia-card h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     
@@ -12,37 +38,64 @@
     <div id="header"></div>
 
     <section class="content-page">
-        <h1>Espaço de Troca</h1>
+        <h1>🔄 Espaço de Troca</h1>
+        
         <p style="font-size: 1.2rem; max-width: 900px; margin-bottom: 40px;">
-            Este é um espaço aberto para professores compartilharem experiências, atividades bem-sucedidas, desafios e reflexões sobre Brain Rot, desinformação, uso consciente de telas e formação crítica na Educação Básica.
+            Este é um espaço coletivo para professores compartilharem experiências, atividades, desafios e reflexões sobre Brain Rot, desinformação e formação crítica na Educação Básica.
         </p>
 
-        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 40px;">
-            <h3>Como participar?</h3>
-            <p>Escreva abaixo sua experiência ou dúvida. Os comentários são públicos e visíveis para toda a comunidade de educadores.</p>
+        <!-- Formulário -->
+        <div class="form-container">
+            <h2>Envie sua experiência</h2>
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSd_f6Q-s3ekbOIo-v60AaSCGOgorVLhMUpyDl0LobsCCCnyoQ/viewform?embedded=true" 
+                width="100%" 
+                height="950" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Carregando…
+            </iframe>
         </div>
 
-        <!-- Utterances - Comentários -->
-        <div id="utterances-container"></div>
+        <h2>Experiências Compartilhadas</h2>
+        <div id="experiencias" style="margin-top: 20px;">
+            <!-- Experiências serão carregadas aqui -->
+        </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
 
     <script>
-        // Carrega Header e Footer
         fetch('header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
         fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
 
-        // Carrega Utterances
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.setAttribute('repo', 'formacaocritica/site-formacao-critica');
-        script.setAttribute('issue-term', 'pathname');
-        script.setAttribute('label', 'troca');
-        script.setAttribute('theme', 'github-light');
-        script.async = true;
-        document.getElementById('utterances-container').appendChild(script);
+        fetch('https://script.google.com/macros/s/AKfycbxTf1qjUjqfG7_AETbb8OzRuG_3xqKGu7UNiyF3xV8OMSPbRcKo4AurPKqSAN52jiT7/exec')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('experiencias');
+                container.innerHTML = '';
+
+                if (data.length === 0) {
+                    container.innerHTML = '<p>Nenhuma experiência compartilhada ainda. Seja o primeiro!</p>';
+                    return;
+                }
+
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'experiencia-card';
+                    card.innerHTML = `
+                        <h3>${item['Título da experiência ou atividade'] || 'Experiência sem título'}</h3>
+                        <p class="meta"><strong>${item['Nome'] || 'Professor(a) anônimo(a)'}</strong> ${item['Cidade/escola'] ? `• ${item['Cidade/escola']}` : ''}</p>
+                        <p>${item['Escreva sua experiência, reflexão ou atividade'] || ''}</p>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(() => {
+                document.getElementById('experiencias').innerHTML = '<p>Erro ao carregar experiências. Atualize a página.</p>';
+            });
     </script>
 </body>
 </html>
