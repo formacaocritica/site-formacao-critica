@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação Crítica na Era Digital</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>   <!-- ← Coloque aqui no HEAD -->
-</head>
-<body>
-    
-    <!-- Header -->
-    <div id="header"></div>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curadoria de Vídeos Críticos - Formação Crítica</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
     <style>
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin: 20px 0;
-            border-radius: 10px;
         }
         .video-container iframe {
             position: absolute;
@@ -33,6 +35,23 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        .video-card h3 {
+            padding: 15px 20px 10px;
+            margin: 0;
+            font-size: 1.25rem;
+            color: #2c3e50;
+        }
+        .video-card p {
+            padding: 0 20px 20px;
+            margin: 0;
+            color: #555;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -43,61 +62,98 @@
 
     <section class="content-page">
         <h1>Curadoria de Vídeos Críticos</h1>
-        <p>Seleção de vídeos para formação continuada de professores sobre Brain Rot, desinformação, cidadania digital e os impactos da tecnologia na educação.</p>
+        <p>Seleção cuidadosa de vídeos para formação continuada de professores sobre Brain Rot, desinformação, capitalismo de vigilância e impactos da tecnologia na educação.</p>
 
-        <!-- 1. Brain Rot -->
-        <div class="card">
-            <h3>Brain Rot: O cérebro da sua criança está APODRECENDO!</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Xwvc9QsONSY" title="Brain Rot - Mayra Gaiato" frameborder="0" allowfullscreen></iframe>
+        <div class="videos-grid">
+
+            <!-- Vídeo 1 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Xwvc9QsONSY" title="Brain Rot" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Brain Rot: O cérebro da sua criança está APODRECENDO!</h3>
+                <p><strong>Mayra Gaiato</strong> — Excelente explicação sobre os efeitos do consumo excessivo de telas no desenvolvimento infantil.</p>
             </div>
-            <p><strong>Mayra Gaiato</strong> — Psicóloga. Excelente explicação sobre os efeitos do consumo excessivo de telas no desenvolvimento infantil.</p>
-        </div>
 
-        <!-- 2. Cidadania Digital -->
-        <div class="card">
-            <h3>Cidadania digital: o que é e como a escola pode ajudar?</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/rkrXoadWXwU" title="Cidadania Digital - LIV" frameborder="0" allowfullscreen></iframe>
+            <!-- Vídeo 2 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/rkrXoadWXwU" title="Cidadania Digital" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Cidadania digital: o que é e como a escola pode ajudar?</h3>
+                <p><strong>LIV - Laboratório Inteligência de Vida</strong> — Formação de cidadãos digitais conscientes.</p>
             </div>
-            <p><strong>LIV - Laboratório Inteligência de Vida</strong> — Como a escola pode formar cidadãos digitais conscientes e responsáveis.</p>
-        </div>
 
-        <!-- 3. Educação Midiática -->
-        <div class="card">
-            <h3>Educação Midiática: O que é isso, afinal?</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ihcH5uApREQ" title="Educação Midiática - MídiaMundo" frameborder="0" allowfullscreen></iframe>
+            <!-- Vídeo 3 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ihcH5uApREQ" title="Educação Midiática" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Educação Midiática: O que é isso, afinal?</h3>
+                <p><strong>MídiaMundo</strong> — Conceitos fundamentais de educação para a era digital.</p>
             </div>
-            <p><strong>MídiaMundo</strong> — Conceitos fundamentais de educação midiática e sua importância para a cidadania no mundo atual.</p>
-        </div>
 
-        <!-- 4. Capitalismo de Vigilância -->
-        <div class="card">
-            <h3>O Capitalismo de Vigilância e a Civilização da Informação</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/f35ysIOLMzc" title="Capitalismo de Vigilância" frameborder="0" allowfullscreen></iframe>
+            <!-- Vídeo 4 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/f35ysIOLMzc" title="Capitalismo de Vigilância" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>O Capitalismo de Vigilância e a Civilização da Informação</h3>
+                <p><strong>Victor Góis</strong> — Análise profunda sobre o modelo econômico das plataformas.</p>
             </div>
-            <p><strong>Victor Góis</strong> — Análise sobre o modelo econômico das plataformas digitais e suas consequências sociais.</p>
-        </div>
 
-        <!-- 5. Influência dos Algoritmos -->
-        <div class="card">
-            <h3>Influência dos algoritmos nas pessoas | Segredos de Estado</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/K2gEjh8B_fU" title="Influência dos Algoritmos" frameborder="0" allowfullscreen></iframe>
+            <!-- Vídeo 5 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/K2gEjh8B_fU" title="Algoritmos" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Influência dos algoritmos nas pessoas</h3>
+                <p><strong>Canal History Brasil</strong> — Como os algoritmos manipulam comportamento e consumo.</p>
             </div>
-            <p><strong>Canal History Brasil</strong> — Como os algoritmos manipulam comportamento, sentimentos e consumo.</p>
-        </div>
 
+            <!-- NOVOS VÍDEOS -->
+
+            <!-- Vídeo 6 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/xRJTx66HYt4" title="O Dilema das Redes" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>O Dilema das Redes (Trailer Legendado)</h3>
+                <p><strong>Curta Essa!</strong> — Documentário que revela os mecanismos viciantes das redes sociais.</p>
+            </div>
+
+            <!-- Vídeo 7 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/P2fgvkmhH2A" title="Segredos dos donos de redes" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Os segredos dos donos de redes sociais para viciar e manipular</h3>
+                <p><strong>BBC News Brasil</strong> — 5 pontos-chave do documentário "O Dilema das Redes".</p>
+            </div>
+
+            <!-- Vídeo 8 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/0TCnsOxOxVY" title="Último vídeo sobre Brain Rot" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Esse é o Último Vídeo que você Precisará ver sobre Brain Rot</h3>
+                <p><strong>Reservatório de Dopamina</strong> — Resumo claro e impactante sobre o tema.</p>
+            </div>
+
+            <!-- Vídeo 9 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jTLK4y5EQEU" title="Vídeos curtos prejudicam o cérebro" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h3>Como VÍDEOS CURTOS Prejudicam o CÉREBRO? Neurologista explica</h3>
+                <p><strong>Neurologia e Psiquiatria</strong> — Explicação médica sobre Brain Rot e vídeos curtos.</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
 
-    <script>
-        fetch('header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
-        fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
-    </script>
 </body>
 </html>
