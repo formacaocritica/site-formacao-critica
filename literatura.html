@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura e Recursos - Formação Crítica</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <style>
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .recurso-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .recurso-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .recurso-card .tipo {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .recurso-card h3 {
+            color: #2c3e50;
+            margin: 0 0 12px 0;
+            font-size: 1.25rem;
+        }
+        .recurso-card p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .recurso-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .recurso-card a:hover {
+            text-decoration: underline;
+        }
+        section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin: 50px 0 30px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <div id="header"></div>
+
+    <section class="content-page">
+        <h1>Literatura e Recursos Recomendados</h1>
+        <p>Seleção de livros, artigos científicos e documentos oficiais para aprofundamento em Brain Rot, desinformação, cultura digital, capitalismo de vigilância e formação crítica de professores.</p>
+
+        <!-- Seção Livros -->
+        <h2>Livros Fundamentais</h2>
+        <div class="recursos-grid">
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Pedagogia do Oprimido</h3>
+                <p><strong>Paulo Freire</strong></p>
+                <a href="https://www.letras.ufmg.br/espanhol/pdf/pedagogia_do_oprimido.pdf" target="_blank">🔗 PDF Gratuito</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Pedagogia Histórico-Crítica</h3>
+                <p><strong>Dermeval Saviani</strong></p>
+                <a href="https://www.amazon.com.br/Pedagogia-Hist%C3%B3rico-Cr%C3%ADtica-Saviani-Dermeval/dp/8585701099" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Flagelos da Desinformação</h3>
+                <p><strong>Lucia Santaella (org.)</strong> — 2023</p>
+                <a href="https://www.amazon.com.br/Flagelos-desinforma%C3%A7%C3%A3o-Lucia-Santaella-ebook/dp/B0BZQHKMT8" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>A Máquina do Caos</h3>
+                <p><strong>Max Fisher</strong></p>
+                <a href="https://www.amazon.com.br/m%C3%A1quina-caos-redes-sociais-reprogramaram/dp/6556924008" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Irresistível: Como o vício da tecnologia mudou nossas vidas</h3>
+                <p><strong>Adam Alter</strong></p>
+                <a href="https://www.amazon.com.br/Irresist%C3%ADvel-voc%C3%AA-viciado-tecnologia-lidar/dp/8547000585" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Amusing Ourselves to Death</h3>
+                <p><strong>Neil Postman</strong></p>
+                <a href="https://www.amazon.com.br/Divertir-nos-morte-Discurso-P%C3%BAblico-business/dp/B001AYDC46" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Manifesto da Educação Midiática</h3>
+                <p><strong>David Buckingham</strong></p>
+                <a href="https://www.amazon.com.br/Manifesto-educa%C3%A7%C3%A3o-midi%C3%A1tica-David-Buckingham/dp/8594932308" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Crescer na Era das Mídias Eletrônicas</h3>
+                <p><strong>David Buckingham</strong></p>
+                <a href="https://www.amazon.com.br/Crescer-era-das-m%C3%ADdias-eletr%C3%B4nicas/dp/8515032694" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>A Nova Idade das Trevas</h3>
+                <p><strong>James Bridle</strong></p>
+                <a href="https://www.amazon.com.br/nova-idade-das-trevas-tecnologia/dp/6580309520" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Sociedade de Controle</h3>
+                <p><strong>Byung-Chul Han</strong></p>
+                <a href="https://www.amazon.com.br/sociedade-controle-Manipula%C3%A7%C3%A3o-modula%C3%A7%C3%A3o-digitais/dp/6589705194" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Big Tech: A ascensão dos dados e o fim da política</h3>
+                <p><strong>Evgeny Morozov</strong></p>
+                <a href="https://www.amazon.com.br/Big-Tech-ascens%C3%A3o-dados-pol%C3%ADtica/dp/8571260125" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>A Última Geração Humana</h3>
+                <p><strong>Henry Kissinger & Eric Schmidt</strong></p>
+                <a href="https://www.amazon.com.br/%C3%9ALTIMA-GERA%C3%87%C3%83O-HUMANA-intelig%C3%AAncia-artificial/dp/1068489073" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Nação Dopamina</h3>
+                <p><strong>Anna Lembke</strong></p>
+                <a href="https://www.amazon.com.br/Na%C3%A7%C3%A3o-dopamina-excesso-deixando-infelizes/dp/6586551714" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>A Geração Ansiosa</h3>
+                <p><strong>Jonathan Haidt</strong></p>
+                <a href="https://www.amazon.com.br/gera%C3%A7%C3%A3o-ansiosa-inf%C3%A2ncia-hiperconectada-transtornos/dp/8535938532" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Infância Sequestrada pelas Telas</h3>
+                <p>Desafios da infância digital</p>
+                <a href="https://www.amazon.com.br/Inf%C3%A2ncia-sequestrada-pelas-telas-desafio/dp/655592070X" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Desinformação: Por que racionais acreditam em conspirações irracionais</h3>
+                <p>Obra sobre mecanismos da desinformação</p>
+                <a href="https://www.amazon.com.br/Desinforma%C3%A7%C3%A3o-racionais-acreditarem-conspira%C3%A7%C3%A3o-irracionais/dp/6555648449" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Os Engenheiros do Caos</h3>
+                <p><strong>Giuliano Da Empoli</strong></p>
+                <a href="https://www.amazon.com.br/engenheiros-caos-conspira%C3%A7%C3%A3o-algoritmos-influenciar/dp/8554126602" target="_blank">🔗 Amazon</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Livro</span>
+                <h3>Fake News e Inteligência Artificial: Desinformação na Era Digital</h3>
+                <p>Obra sobre desinformação e IA</p>
+                <a href="https://www.amazon.com.br/Fake-News-Intelig%C3%AAncia-Artificial-Desinforma%C3%A7%C3%A3o/dp/8562938653" target="_blank">🔗 Amazon</a>
+            </div>
+
+        </div>
+
+        <!-- Seção Artigos -->
+        <h2>Artigos Científicos</h2>
+        <div class="recursos-grid">
+
+            <div class="recurso-card">
+                <span class="tipo">Artigo</span>
+                <h3>Educação Midiática e a Lei nº 15.100/25</h3>
+                <p><strong>Wêller Santos Gonçalves & Cissa Gisele Alves Pinheiro (2025)</strong></p>
+                <a href="https://www.researchgate.net/publication/397286675_EDUCACAO_MIDIATICA_E_A_LEI_N_1510025_PERSPECTIVAS_DE_DOCENTES_DE_UBERLANDIA_A_LUZ_DO_PENSAMENTO_DE_BUCKINGHAM" target="_blank">🔗 ResearchGate</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Artigo</span>
+                <h3>Vídeos virais e Brain Rot: A dificuldade de concentração em sala de aula e as possibilidades pedagógicas</h3>
+                <p>Simpósio ABCiber 2025</p>
+                <a href="https://abciber.org.br/eventos/ojs3/index.php/simposio2025/article/view/294" target="_blank">🔗 Acessar Artigo</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Artigo</span>
+                <h3>BRAIN ROT: IMPACTOS COGNITIVOS E DESAFIOS CONTEMPORÂNEOS</h3>
+                <p>Revista Jornada - IESSA</p>
+                <a href="https://www.iessa.edu.br/revista/index.php/jornada/article/view/2825" target="_blank">🔗 Acessar Artigo</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Artigo</span>
+                <h3>Educação midiática e os limites da “alfabetização”: orientações ecológicas para plataformas performativas</h3>
+                <p>Revista Comunicação & Educação (USP)</p>
+                <a href="https://revistas.usp.br/comueduc/pt_BR/article/view/217958/202630" target="_blank">🔗 Acessar Artigo</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Artigo</span>
+                <h3>Educação midiática, cultura digital e as fake news em tempos de pandemia</h3>
+                <p>Revista Educação em Revista (UNESP)</p>
+                <a href="https://revistas.marilia.unesp.br/index.php/educacaoemrevista/article/view/12130" target="_blank">🔗 Acessar Artigo</a>
+            </div>
+
+        </div>
+
+      <h2>Documentos Oficiais e Guias do Governo</h2>
+        <div class="recursos-grid">
+
+            <div class="recurso-card">
+                <span class="tipo">Guia Oficial</span>
+                <h3>Guia de Educação Digital e Midiática</h3>
+                <p>Ministério da Educação (MEC)</p>
+                <a href="https://www.gov.br/mec/pt-br/escolas-conectadas/documentos/guia_eddigital_versofinaloficial.pdf" target="_blank">🔗 PDF Oficial (MEC)</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Estratégia</span>
+                <h3>Estratégia Brasileira de Educação Midiática</h3>
+                <p>Secretaria de Comunicação Social (Secom)</p>
+                <a href="https://www.gov.br/secom/pt-br/arquivos/2023_secom-spdigi_estrategia-brasileira-de-educacao-midiatica.pdf" target="_blank">🔗 PDF Estratégia</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Guia Oficial</span>
+                <h3>Guia de Educação Digital e Midiática – Como elaborar e implementar o currículo</h3>
+                <p>Ministério da Educação (MEC)</p>
+                <a href="https://mecred.mec.gov.br/recurso/366316" target="_blank">🔗 Acessar Guia</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Matriz</span>
+                <h3>Matriz de Saberes Digitais Docentes</h3>
+                <p>Ministério da Educação (MEC)</p>
+                <a href="https://www.gov.br/mec/pt-br/escolas-conectadas/20240822MatrizSaberesDigitais.pdf" target="_blank">🔗 PDF Matriz</a>
+            </div>
+
+            <div class="recurso-card">
+                <span class="tipo">Documento Legal</span>
+                <h3>ECA Digital</h3>
+                <p>Estatuto da Criança e do Adolescente na Era Digital</p>
+                <a href="https://www.gov.br/mj/pt-br/assuntos/sua-protecao/sedigi/eca-digital/eca-digital-1" target="_blank">🔗 ECA Digital</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+</html>
