@@ -5,19 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formação Crítica na Era Digital</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>   <!-- ← Coloque aqui no HEAD -->
-</head>
-<body>
-    
-    <!-- Header -->
-    <div id="header"></div>
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação Crítica na Era Digital</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
     
@@ -28,8 +16,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Formação Crítica na Era Digital</h1>
-            <p>Um espaço de formação continuada para professores que querem enfrentar os desafios da cultura digital
-                 com consciência e criticidade.</p>
+            <p>Um espaço de formação continuada para professores que querem enfrentar os desafios da cultura digital, do Brain Rot e da desinformação com consciência e criticidade.</p>
         </div>
     </section>
 
@@ -52,21 +39,19 @@
                 <h3>Curadoria de Vídeos</h3>
                 <p>Seleção crítica de conteúdos sobre tecnologia, capitalismo e educação.</p>
             </a>
+            <a href="literatura.html" class="card">
+                <h3>Literatura e Recursos</h3>
+                <p>Livros, artigos científicos e documentos oficiais recomendados.</p>
+            </a>
+            <a href="sobre.html" class="card">
+                <h3>Sobre o Projeto</h3>
+                <p>Conheça a pesquisadora Cissa Gisele Alves Pinheiro e o contexto do trabalho.</p>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
 
 </body>
 </html>
