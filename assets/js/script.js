@@ -25,6 +25,14 @@ function decreaseFontSize() {
     if (size > 14) document.body.style.fontSize = (size - 2) + 'px';
 }
 
+// ====================== NAVEGAÇÃO MOBILE (DROPDOWN) ======================
+function toggleNavMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.style.display = (navMenu.style.display === 'block') ? 'none' : 'block';
+    }
+}
+
 // Carrega header e footer
 document.addEventListener('DOMContentLoaded', () => {
     fetch('header.html')
@@ -37,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(html => document.getElementById('footer').innerHTML = html)
         .catch(e => console.error(e));
 });
+
 let isSpeaking = false;
 
 function toggleTextToSpeech() {

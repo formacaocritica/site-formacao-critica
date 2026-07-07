@@ -1,7 +1,16 @@
 <nav>
     <div class="nav-container">
-        <h1>🧠 Formação Crítica</h1>
-        <ul>
+        
+        <!-- Botão no lado esquerdo -->
+        <button class="nav-toggle" onclick="toggleNavMenu()">☰ Navegue aqui</button>
+
+        <!-- Título centralizado -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: inherit;">
+            <h1>🧠 Formação Crítica</h1>
+        </a>
+
+        <!-- Menu dropdown (só aparece ao clicar) -->
+        <ul id="nav-menu" class="nav-dropdown">
             <li><a href="index.html">Início</a></li>
             <li><a href="brainrot.html">O que é Brain Rot?</a></li>
             <li><a href="estrategias.html">Estratégias de Sala</a></li>
@@ -10,6 +19,7 @@
             <li><a href="literatura.html">Literatura e Recursos</a></li>
             <li><a href="sobre.html">Sobre o Projeto</a></li>
         </ul>
+
     </div>
 </nav>
 
@@ -24,3 +34,79 @@
         <li><button onclick="toggleTextToSpeech()">🔊 Ler Página em Voz Alta</button></li>
     </ul>
 </div>
+
+<style>
+    .nav-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Título centralizado */
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Botão no lado esquerdo */
+    .nav-toggle {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        background: #2c3e50;
+        min-width: 240px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        border-radius: 10px;
+        padding: 8px 0;
+        z-index: 999;
+    }
+
+    .nav-dropdown li {
+        list-style: none;
+    }
+
+    .nav-dropdown a {
+        display: block;
+        padding: 12px 24px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.05rem;
+    }
+
+    .nav-dropdown a:hover {
+        background: #34495e;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+        .nav-logo {
+            position: static;
+            transform: none;
+            margin: 0 auto;
+        }
+        
+        .nav-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .nav-dropdown {
+            left: 20px;
+            width: calc(100% - 40px);
+        }
+    }
+</style>
